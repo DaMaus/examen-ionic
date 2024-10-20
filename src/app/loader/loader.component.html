@@ -1,0 +1,17 @@
+<ion-content class="loader-container">
+  <swiper-container
+    slides-per-view="1"
+    slides-per-group="1"
+    effect="fade"
+    [loop]="true"
+    autoplay="true"
+  >
+    <swiper-slide class="vh-100" *ngFor="let slide of slides">
+      <div class="slide" [style.background-image]="'url(' + slide.image + ')'">
+        <div class="black-mask-slide d-flex justify-content-center align-items-end py-5">
+          <h2>{{ slide.text }}</h2>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>
